@@ -1,0 +1,80 @@
+<%- include('./include/header.ejs') %>
+
+    <section id="main">
+      <div class="container">
+        <div class="row">
+          <%- include('./include/side.ejs') %>
+          <div class="col-md-9">
+            <!-- Website Overview -->
+            <div class="panel panel-default">
+              <div class="panel-heading main-color-bg">
+                <h3 class="panel-title">Mange Your Stock!!!</h3>
+              </div>
+              <div class="panel-body">
+                <div class="col-md-12">
+                  <div class="well dash-box">
+                    <h2>KEYA POLYPLASTIC</h2>
+                    <!-- <h2><span class="glyphicon glyphicon-user" aria-hidden="true"></span> 203</h2>
+                    <h4>Total Invoice</h4> -->
+                  </div>
+                </div>
+                <!-- <div class="col-md-3">
+                  <div class="well dash-box">
+                    <h2><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> 12</h2>
+                    <h4>Products</h4>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="well dash-box">
+                    <h2><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> 33</h2>
+                    <h4>Customers</h4>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="well dash-box">
+                    <h2><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> 12,334</h2>
+                    <h4>Total Sell</h4>
+                  </div>
+                </div> -->
+              </div>
+              </div>
+
+              <!-- Latest Users -->
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Website Overview</h3>
+                </div>
+                <div class="panel-body">
+                  <div class="col-md-4">
+                    <div class="well dash-box">
+                      <!-- <h2>KEYA POLYPLASTIC</h2> -->
+                      <h2><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> <%= db_rows_array %></h2>
+                      <h4>Products</h4>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="well dash-box">
+                      <h2><span class="glyphicon glyphicon-th" aria-hidden="true"></span> <%= result %></h2>
+                      <h4>Total Stock</h4>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="well dash-box">
+                      <h2><span class="glyphicon glyphicon-magnet" aria-hidden="true"></span> <%= unit %></h2>
+                      <h4>UOM</h4>
+                    </div>
+                  </div>
+                  <!-- <div class="col-md-3">
+                    <div class="well dash-box">
+                      <h2><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> 12,334</h2>
+                      <h4>Total Sell</h4>
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <%- include('./include/end.ejs') %>

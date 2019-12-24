@@ -1,0 +1,11 @@
+<form method="POST">
+
+        <h3>Edit Product</h3>
+        <label>UOM ID</label>
+                  <input  type="text" name="uid" value="<%= db_rows_array[0].uid %>" readonly required>
+             <br>
+                  <label>Product Name</label>
+                  <input  type="text" name="uom" value="<%= db_rows_array[0].uom %>" required>
+             <br>
+            <button type="submit">SAVE</button>
+</form>

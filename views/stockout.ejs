@@ -1,0 +1,69 @@
+<%- include('./include/header.ejs') %>
+
+    <section id="main">
+      <div class="container">
+        <div class="row">
+
+            <%- include('./include/side.ejs') %>
+          
+            <form action="/outstock" method="POST">
+                <div class="col-md-9">
+                  <!-- add new customer -->
+                  <form action="/addcustomer" method="POST">
+                  <div class="panel panel-default">
+                    <div class="panel-heading main-color-bg">
+                      <h3 class="panel-title">Stock Out</h3>
+                    </div>
+                    <div class="panel-body">
+                      <div class="row">
+                        
+                            <div class="col-md-6 form-group">
+                                <label>Product Name</label>
+                                <select class="form-control" name="productname" required>
+                                  <%if(db_rows_array.length > 0){
+                                    for(var i=0; i<db_rows_array.length; i++){%>
+                                  <option><%= db_rows_array[i].productname %></option>
+                                  <%}}%>
+                                </select>
+                            </div>
+                            <div class="col-md-3 form-group">
+                              <label>Quantity</label>
+                              <input class="form-control" type="number" name="quantity" placeholder="quantity" required>
+                          </div>
+                            <div class="col-md-3 form-group">
+                                <label>UOM</label>
+                                <select class="form-control" name="uom" required>
+                                  <%if(arrays.length > 0){
+                                    for(var i=0; i<arrays.length; i++){%>
+                                  <option><%= arrays[i].uom %></option>
+                                  <%}}%>
+                                </select>
+                            </div>
+                            
+                      </div>
+                      <br>
+                      <div class="row">
+                        <div class="col-md-12 form-group">
+                          <button type="submit" class="btn main-color-bg form-control">OUT</button>
+                        </div>
+                      </div>
+                      <br>
+                    </div>
+                    </div>
+                  
+                    <!-- list of customer -->
+                  
+      
+                </div>
+              </form>
+        </div>
+      </div>
+    </section>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+    <%- include('./include/end.ejs') %>
