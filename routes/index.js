@@ -9,10 +9,10 @@ var url = require('url');
 
 
 var connection = mysql.createConnection({
-  host : 'localhost',
-  user : 'root',
-  password : '',
-  database : 'keyastock'
+  host : 'us-cdbr-east-06.cleardb.net',
+  user : 'b4bcb8085e31a4',
+  password : '3f9ccc0e',
+  database : 'heroku_dd88a8156d387e7'
 });
 connection.connect(function(err){
   if(!err){
